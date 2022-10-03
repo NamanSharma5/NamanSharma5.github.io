@@ -43,6 +43,17 @@
         background-color: #fd7cac !important;
       }
     </style>
+
+    <script>
+      function swapImage(){
+        if(document.getElementById("main-image").src.endsWith('pinkLogo.png') == true){
+          document.getElementById("main-image").src = "images/whiteLogo.png";
+        }else{
+          document.getElementById("main-image").src = "images/pinkLogo.png";
+        }
+      }
+    </script>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -85,10 +96,12 @@
       <h1 class="w3-xxxlarge" style="text-align: center">DealMapper</h1>
 
       <img
-        src="images/DealMapperAppLogo.png"
+        id = "main-image"
+        src="images/pinkLogo.png"
         alt="Logo"
         width="300"
         height="300"
+        onclick="swapImage()"
       />
 
       <div style="color: white; margin: 16px">
